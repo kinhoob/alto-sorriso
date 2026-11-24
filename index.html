@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Alto Sorriso — Clínica Odontológica</title>
+<meta name="description" content="Alto Sorriso: odontologia com tecnologia, cuidado e dedicação.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<header class="header" id="header"><div class="wrap nav">
+  <a href="#inicio" class="brand"><img src="assets/logo/logo.svg" alt="" width="32" height="32"><span>Alto Sorriso</span></a>
+  <nav id="menu" class="menu" aria-label="Principal">
+    <a href="#inicio">Início</a><a href="#sobre">Sobre nós</a><a href="#tratamentos">Tratamentos</a><a href="#resultados">Resultados</a><a href="#localizacao">Localização</a>
+    <a href="#agendar" class="btn btn-sm">Agendar</a>
+  </nav>
+  <button class="icon-btn" id="themeBtn" aria-label="Alternar tema">
+    <svg class="sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.900 4.900l1.400 1.400M17.700 17.700l1.400 1.400M2 12h2M20 12h2M4.900 19.100l1.400-1.400M17.700 6.300l1.400-1.400"/></svg>
+    <svg class="moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.800A9 9 0 1 1 11.200 3a7 7 0 0 0 9.800 9.800Z"/></svg>
+  </button>
+  <button class="icon-btn burger" id="burger" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"><span></span><span></span></button>
+</div></header>
+
+<main>
+<section class="hero" id="inicio"><div class="wrap hero-grid">
+  <div class="hero-text">
+    <h1 class="reveal-text">Seu sorriso merece o melhor cuidado.</h1>
+    <p class="lead fade" style="--d:.7s">Transformamos sorrisos com tecnologia, cuidado e dedicação. Descubra uma nova experiência em odontologia.</p>
+    <div class="actions fade" style="--d:.85s"><a href="#tratamentos" class="btn">Conheça nossos tratamentos</a><a href="#agendar" class="btn btn-ghost">Agende sua avaliação</a></div>
+  </div>
+  <figure class="hero-fig fade" style="--d:.4s">
+    <div class="blob" aria-hidden="true"></div>
+    <div class="ph hero-img" role="img" aria-label="Espaço reservado para fotografia de paciente sorrindo"><span>Foto: pessoa sorrindo<br><small>assets/images/hero.jpg</small></span></div>
+    <svg class="arc" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="90" fill="none" stroke="currentColor" stroke-width="1.500" stroke-dasharray="2 9" stroke-linecap="round"/></svg>
+  </figure>
+  <a href="#sobre" class="scroll" aria-label="Rolar para baixo"><i></i></a>
+</div></section>
+
+<section class="sec" id="sobre"><div class="wrap about">
+  <div class="ph about-img" data-parallax role="img" aria-label="Espaço para foto do ambiente ou equipe"><span>Foto: ambiente ou equipe<br><small>assets/images/clinica.jpg</small></span></div>
+  <div>
+    <h2 class="reveal-text">Mais que cuidar de sorrisos, cuidamos de pessoas.</h2>
+    <p class="muted rv">Texto institucional provisório. Substitua por a história, a missão e os valores reais da Alto Sorriso.</p>
+    <ul class="diffs" id="diffs"></ul>
+  </div>
+</div></section>
+
+<section class="sec alt" id="tratamentos"><div class="wrap">
+  <h2 class="reveal-text">Tratamentos</h2><p class="muted rv">Cuidado completo para cada etapa da sua saúde bucal.</p>
+  <div class="grid" id="services"></div>
+</div></section>
+
+<section class="sec" id="resultados"><div class="wrap">
+  <h2 class="reveal-text">Novos sorrisos, novas histórias.</h2>
+  <p class="muted rv">Confira alguns resultados de tratamentos realizados na Alto Sorriso.</p>
+  <div class="ba rv">
+    <div class="cmp" id="cmp" style="--p:50%">
+      <div class="ph after"><span>Depois<br><small>placeholder</small></span></div>
+      <div class="ph before"><span>Antes<br><small>placeholder</small></span></div>
+      <input type="range" min="0" max="100" value="50" id="cmpRange" aria-label="Comparar antes e depois">
+      <div class="handle" aria-hidden="true"></div>
+    </div>
+    <div class="ba-ctl">
+      <button class="icon-btn" id="prev" aria-label="Caso anterior">‹</button>
+      <p id="caseInfo" class="muted"></p>
+      <button class="icon-btn" id="next" aria-label="Próximo caso">›</button>
+    </div>
+    <p class="note">Imagens demonstrativas. Serão substituídas por fotos reais, publicadas somente com autorização de uso de imagem assinada pelo paciente.</p>
+  </div>
+</div></section>
+
+<section class="cta" id="agendar"><div class="wrap">
+  <h2 class="reveal-text">Está na hora de transformar seu sorriso?</h2>
+  <p class="rv">Agende sua avaliação e descubra como podemos ajudar você.</p>
+  <a class="btn btn-light" data-wa href="#">Agendar pelo WhatsApp</a>
+</div></section>
+
+<section class="sec" id="localizacao"><div class="wrap loc">
+  <div>
+    <h2 class="reveal-text">Estamos esperando por você.</h2>
+    <p class="addr rv">Alto do Deodato, nº 615</p>
+    <p class="muted" id="addrExtra"></p>
+    <a class="btn" id="mapBtn" target="_blank" rel="noopener" href="#">Abrir no Google Maps</a>
+  </div>
+  <div class="map"><iframe id="mapFrame" title="Mapa da localização" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+</div></section>
+</main>
+
+<footer class="footer"><div class="wrap fgrid">
+  <div><a href="#inicio" class="brand"><img src="assets/logo/logo.svg" alt="" width="28" height="28"><span>Alto Sorriso</span></a><p class="muted">Odontologia com tecnologia, cuidado e dedicação.</p></div>
+  <nav aria-label="Rodapé"><a href="#sobre">Sobre nós</a><a href="#tratamentos">Tratamentos</a><a href="#resultados">Resultados</a><a href="#localizacao">Localização</a></nav>
+  <div class="muted"><a data-wa href="#">WhatsApp</a><br>Alto do Deodato, nº 615<br><a id="ig" target="_blank" rel="noopener" href="#">Instagram</a></div>
+</div><p class="wrap copy muted">© <span id="yr"></span> Alto Sorriso. Todos os direitos reservados.</p></footer>
+<script src="js/script.js"></script>
+</body></html>
