@@ -1,4 +1,4 @@
-:root{--bg:#fff;--bg2:#F4F7F5;--card:#fff;--tx:#0B1F16;--mu:#5B6862;--g:#1F7A4D;--g2:#E3F1EA;--ln:#E1E7E3;--r:18px;--ease:cubic-bezier(.22,1,.36,1)}
+:root{--bg:#fff;--bg2:#F4F7F5;--card:#fff;--tx:#0B1F16;--mu:#5B6862;--g:#306848;--g2:#E3F1EA;--ln:#E1E7E3;--r:18px;--ease:cubic-bezier(.22,1,.36,1)}
 [data-theme=dark]{--bg:#0D0F0E;--bg2:#131614;--card:#1A1D1B;--tx:#F3F6F4;--mu:#9AA6A0;--g:#3FBF82;--g2:#14281F;--ln:#262B28}
 *{box-sizing:border-box;margin:0}html{scroll-behavior:smooth;scroll-padding-top:80px}
 body{font:400 1rem/1.65 Manrope,sans-serif;background:var(--bg);color:var(--tx);transition:background .5s,color .5s}
@@ -15,6 +15,7 @@ h1{font-size:clamp(2.6rem,6.500vw,5.200rem)}h2{font-size:clamp(2rem,4vw,3.200rem
 .header{position:fixed;inset:0 0 auto;z-index:50;transition:background .4s,backdrop-filter .4s,box-shadow .4s}
 .header.scrolled{background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--ln)}
 .nav{display:flex;align-items:center;gap:12px;height:74px}.brand{display:flex;align-items:center;gap:10px;font:500 1.200rem Fraunces,serif;margin-right:auto}
+.brand .logo{height:30px;width:auto;display:block}.footer .brand .logo{height:26px;width:auto}[data-theme=dark] .brand .logo{background:#EDF2EE;border-radius:10px;padding:3px 8px;box-sizing:content-box}
 .menu{display:flex;align-items:center;gap:28px;font-size:.95rem;font-weight:500}.menu a:not(.btn){color:var(--mu)}.menu a:not(.btn):hover{color:var(--g)}
 .icon-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--ln);background:transparent;color:var(--tx);cursor:pointer;display:grid;place-items:center;font-size:1.400rem}
 .sun{display:none}[data-theme=dark] .sun{display:block}[data-theme=dark] .moon{display:none}.burger{display:none;position:relative}
@@ -23,14 +24,14 @@ h1{font-size:clamp(2.6rem,6.500vw,5.200rem)}h2{font-size:clamp(2rem,4vw,3.200rem
 .hero{min-height:100svh;display:flex;align-items:center;padding:110px 0 70px;position:relative;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}.actions{display:flex;gap:12px;flex-wrap:wrap}
 .hero-fig{position:relative;aspect-ratio:4/5;max-width:460px;justify-self:end;width:100%}
-.hero-img{position:absolute;inset:0;border-radius:200px 200px 28px 200px}
+.hero-img{position:absolute;inset:0;border-radius:200px 200px 28px 200px}img.hero-img{width:100%;height:100%;object-fit:cover}
 .blob{position:absolute;width:70%;aspect-ratio:1;right:-12%;bottom:-8%;background:var(--g2);border-radius:58% 42% 55% 45%/50% 55% 45% 50%;animation:morph 14s ease-in-out infinite alternate;z-index:-1}
 .arc{position:absolute;width:42%;left:-14%;top:6%;color:var(--g);animation:spin 40s linear infinite}
 @keyframes morph{to{border-radius:42% 58% 45% 55%/55% 45% 55% 45%;transform:rotate(12deg)}}@keyframes spin{to{transform:rotate(360deg)}}
 .scroll{position:absolute;left:50%;bottom:-40px;width:24px;height:40px;border:1.500px solid var(--mu);border-radius:14px}.scroll i{position:absolute;left:50%;top:8px;width:3px;height:8px;margin-left:-1.500px;border-radius:2px;background:var(--g);animation:dot 1.800s var(--ease) infinite}
 @keyframes dot{60%{transform:translateY(14px);opacity:0}}
 .ph{background:repeating-linear-gradient(135deg,var(--g2) 0 14px,transparent 14px 28px),var(--bg2);border:1px dashed var(--g);display:grid;place-items:center;text-align:center;color:var(--g);font-weight:600;overflow:hidden}.ph small{font-weight:400;color:var(--mu)}
-.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,90px);align-items:center}.about-img{aspect-ratio:4/5;border-radius:var(--r);will-change:transform}
+.about{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,6vw,90px);align-items:center}.about-img{aspect-ratio:4/5;border-radius:var(--r);will-change:transform}img.about-img{width:100%;object-fit:cover;display:block}
 .diffs{list-style:none;padding:0;margin-top:36px;display:grid;grid-template-columns:1fr 1fr;gap:28px}.diffs svg{color:var(--g);margin-bottom:8px}.diffs b{display:block}.diffs span{color:var(--mu);font-size:.92rem}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:20px;margin-top:56px}
 .card{background:var(--card);border:1px solid var(--ln);border-radius:var(--r);padding:30px 26px;transition:transform .5s var(--ease),border-color .3s,box-shadow .5s}
