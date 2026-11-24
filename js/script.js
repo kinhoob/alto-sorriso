@@ -60,7 +60,14 @@ $$("a", menu).forEach(a => a.addEventListener("click", () => setMenu(false)));
 $("#services").innerHTML = SERVICES.map(([i, t, d]) => `<article class="card">${ICON(ICONS[i])}<h3>${t}</h3><p>${d}</p></article>`).join("");
 $("#diffs").innerHTML = DIFFS.map(([i, t, d]) => `<li>${ICON(ICONS[i]).replace("<svg","<svg width='28' height='28'")}<b>${t}</b><span>${d}</span></li>`).join("");
 
-/* WhatsApp, mapa, Instagram */
+/* WhatsApp: a solicitação da mensagem pronta vale apenas para o botão da navbar */
+const navSchedule = $("#menu a.btn");
+if (navSchedule) {
+  navSchedule.href = `https://wa.me/558194629646?text=${encodeURIComponent("Olá, gostaria de fazer uma avaliação")}`;
+  navSchedule.target = "_blank";
+  navSchedule.rel = "noopener";
+}
+/* Demais botões continuam usando o contato já configurado para a clínica */
 $$("[data-wa]").forEach(a => {
   if (CONFIG.whatsappLink) { a.href = CONFIG.whatsappLink; a.target = "_blank"; a.rel = "noopener"; }
   else if (CONFIG.whatsapp) { a.href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(CONFIG.whatsappMsg)}`; a.target = "_blank"; a.rel = "noopener"; }
