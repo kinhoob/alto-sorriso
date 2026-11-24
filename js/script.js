@@ -1,10 +1,11 @@
 /* ===== CONFIGURAÇÃO — edite aqui ===== */
 const CONFIG = {
   whatsapp: "",            // só dígitos com DDI+DDD, ex.: "5581900000000"
+  whatsappLink: "https://wa.me/message/HDJYDS4ILZQ4E1", // link direto da bio do Instagram (tem prioridade sobre o número)
   whatsappMsg: "Olá! Gostaria de agendar uma avaliação na Alto Sorriso.",
   address: "Alto do Deodato, 615",
   city: "",                // opcional (cidade/UF/CEP) — melhora a precisão do mapa
-  instagram: "",           // ex.: "https://instagram.com/seuperfil"
+  instagram: "https://www.instagram.com/altosorriso/",
 };
 const ICON = d => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.600" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
 const ICONS = {
@@ -61,7 +62,8 @@ $("#diffs").innerHTML = DIFFS.map(([i, t, d]) => `<li>${ICON(ICONS[i]).replace("
 
 /* WhatsApp, mapa, Instagram */
 $$("[data-wa]").forEach(a => {
-  if (CONFIG.whatsapp) { a.href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(CONFIG.whatsappMsg)}`; a.target = "_blank"; a.rel = "noopener"; }
+  if (CONFIG.whatsappLink) { a.href = CONFIG.whatsappLink; a.target = "_blank"; a.rel = "noopener"; }
+  else if (CONFIG.whatsapp) { a.href = `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(CONFIG.whatsappMsg)}`; a.target = "_blank"; a.rel = "noopener"; }
   else a.addEventListener("click", e => { e.preventDefault(); alert("Defina o número do WhatsApp em js/script.js (CONFIG.whatsapp)."); });
 });
 const q = encodeURIComponent([CONFIG.address, CONFIG.city].filter(Boolean).join(", "));
