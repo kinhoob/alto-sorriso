@@ -7,11 +7,12 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
-<script>try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.dataset.theme=t}catch(e){}</script>
+<link rel="icon" type="image/png" href="assets/logo/icon.png">
+<script>try{document.documentElement.dataset.theme=localStorage.getItem('theme')||'light'}catch(e){document.documentElement.dataset.theme='light'}</script>
 </head>
 <body>
 <header class="header" id="header"><div class="wrap nav">
-  <a href="#inicio" class="brand"><img src="assets/logo/logo.svg" alt="" width="32" height="32"><span>Alto Sorriso</span></a>
+  <a href="#inicio" class="brand"><img src="assets/logo/logo.png" alt="Alto Sorriso" class="logo"></a>
   <nav id="menu" class="menu" aria-label="Principal">
     <a href="#inicio">Início</a><a href="#sobre">Sobre nós</a><a href="#tratamentos">Tratamentos</a><a href="#resultados">Resultados</a><a href="#localizacao">Localização</a>
     <a href="#agendar" class="btn btn-sm">Agendar</a>
@@ -32,14 +33,14 @@
   </div>
   <figure class="hero-fig fade" style="--d:.4s">
     <div class="blob" aria-hidden="true"></div>
-    <div class="ph hero-img" role="img" aria-label="Espaço reservado para fotografia de paciente sorrindo"><span>Foto: pessoa sorrindo<br><small>assets/images/hero.jpg</small></span></div>
+    <img class="hero-img" src="assets/images/hero.jpg" alt="Dr. Ivson Morais sorrindo no consultório da Alto Sorriso">
     <svg class="arc" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="90" fill="none" stroke="currentColor" stroke-width="1.500" stroke-dasharray="2 9" stroke-linecap="round"/></svg>
   </figure>
   <a href="#sobre" class="scroll" aria-label="Rolar para baixo"><i></i></a>
 </div></section>
 
 <section class="sec" id="sobre"><div class="wrap about">
-  <div class="ph about-img" data-parallax role="img" aria-label="Espaço para foto do ambiente ou equipe"><span>Foto: ambiente ou equipe<br><small>assets/images/clinica.jpg</small></span></div>
+  <img class="about-img" data-parallax src="assets/images/clinica.jpg" alt="Interior da Clínica Alto Sorriso">
   <div>
     <h2 class="reveal-text">Mais que cuidar de sorrisos, cuidamos de pessoas.</h2>
     <p class="muted rv">Texto institucional provisório. Substitua por a história, a missão e os valores reais da Alto Sorriso.</p>
@@ -89,7 +90,7 @@
 </main>
 
 <footer class="footer"><div class="wrap fgrid">
-  <div><a href="#inicio" class="brand"><img src="assets/logo/logo.svg" alt="" width="28" height="28"><span>Alto Sorriso</span></a><p class="muted">Odontologia com tecnologia, cuidado e dedicação.</p></div>
+  <div><a href="#inicio" class="brand"><img src="assets/logo/logo.png" alt="Alto Sorriso" class="logo logo-footer"></a><p class="muted">Odontologia com tecnologia, cuidado e dedicação.</p></div>
   <nav aria-label="Rodapé"><a href="#sobre">Sobre nós</a><a href="#tratamentos">Tratamentos</a><a href="#resultados">Resultados</a><a href="#localizacao">Localização</a></nav>
   <div class="muted"><a data-wa href="#">WhatsApp</a><br>Alto do Deodato, nº 615<br><a id="ig" target="_blank" rel="noopener" href="#">Instagram</a></div>
 </div><p class="wrap copy muted">© <span id="yr"></span> Alto Sorriso. Todos os direitos reservados.</p></footer>
