@@ -12,8 +12,8 @@ Abra `index.html` no navegador, ou rode `python3 -m http.server 8000` na pasta e
 - Cores e fontes: variáveis no topo de `css/style.css`.
 
 ## Imagens e logo
-- Logo real em `assets/logo/logo.png` (wordmark) e `assets/logo/icon.png` (favicon). O verde `--g` em `style.css` foi amostrado da logo (#306848).
-- Hero e Sobre usam fotos do Instagram da clínica (`assets/images/hero.jpg`, `assets/images/clinica.jpg`). O comparador de antes/depois segue com placeholders até receber fotos com autorização de uso de imagem.
+- Logo real em `assets/logo/logo.svg` (wordmark) e `assets/logo/icon.svg` (favicon). São SVGs com a imagem embutida em base64, criados a partir da logo oficial; para trocar, substitua o arquivo mantendo o nome. O verde `--g` em `style.css` foi amostrado da logo (#306848).
+- Hero e Sobre usam fotos do Instagram da clínica (`assets/images/hero.svg`, `assets/images/clinica.svg`, mesmo formato de SVG com imagem embutida). O comparador de antes/depois segue com placeholders até receber fotos com autorização de uso de imagem.
 
 ## Tema
 Claro (branco) por padrão. O modo noturno só é aplicado quando o visitante ativa o botão de tema (escolha salva em localStorage); a preferência do sistema não é aplicada automaticamente.
