@@ -15,7 +15,7 @@ h1{font-size:clamp(2.6rem,6.500vw,5.200rem)}h2{font-size:clamp(2rem,4vw,3.200rem
 .header{position:fixed;inset:0 0 auto;z-index:50;transition:background .4s,backdrop-filter .4s,box-shadow .4s}
 .header.scrolled{background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--ln)}
 .nav{display:flex;align-items:center;gap:12px;height:74px}.brand{display:flex;align-items:center;gap:10px;font:500 1.200rem Fraunces,serif;margin-right:auto}
-.brand .logo{height:30px;width:auto;display:block}.footer .brand .logo{height:26px;width:auto}[data-theme=dark] .brand .logo{background:#EDF2EE;border-radius:10px;padding:3px 8px;box-sizing:content-box}
+.brand .logo{height:30px;width:auto;display:block}.footer .brand .logo{height:26px;width:auto}[data-theme=dark] .brand .logo{filter:brightness(1.8)}
 .menu{display:flex;align-items:center;gap:28px;font-size:.95rem;font-weight:500}.menu a:not(.btn){color:var(--mu)}.menu a:not(.btn):hover{color:var(--g)}
 .icon-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--ln);background:transparent;color:var(--tx);cursor:pointer;display:grid;place-items:center;font-size:1.400rem}
 .sun{display:none}[data-theme=dark] .sun{display:block}[data-theme=dark] .moon{display:none}.burger{display:none;position:relative}
